@@ -1,34 +1,11 @@
-// first run 'npm install express' in the console
-const express = require("express");
-const app = express();
-const port = 5000;
+// TODO: install express, import express, and create a new express app
 
-// runs on ex. 1
-app.get("/", (req, res) => {
-  console.log("Hello World");
-});
+// hint: remember to define a port number
+// things can get very hard to debug if you mistype it later
 
-// runs on ex. 2
-app.post("/message", (req, res) => {
-  // req.body is the body attribute we pass in the fetch ex. 2
-  const name = req.body.name;
-  const message = req.body.message;
-  console.log(`${name} says: ${message}`);
-  res.send({ name: "The server", message: "recieved" });
-});
+// TODO: define a GET request handler for the r
 
-app.listen(port, () => {
-  console.log(`server running on port ${port}`);
-});
+// TODO: define a POST request handler at the /my-post endpoint
+// have this request handler read the 'message' attribute of the body of the request
 
-// ex. 1
-fetch("http://localhost:5000/");
-
-// ex. 2
-fetch("http://localhost:5000/messgae", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ name: "The client", message: "Hello!" }),
-});
+// TODO: make the server listen on your selected port number
